@@ -5,94 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Mom</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fff8f4;
-      color: #333;
-      text-align: center;
-    }
-
-    header {
-      background: #f7c6c7;
-      padding: 50px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: #7a2e2e;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    .message {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      font-size: 1.15rem;
-      line-height: 1.7;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto 50px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
-
-    footer {
-      padding: 30px 20px;
-      background: #fbe3e4;
-      font-size: 1rem;
-      color: #6b4444;
-    }
-  </style>
-</head>
-<body>
+    <body>
 
   <header>
     <h1>Happy Birthday Mom ❤️</h1>
-    <p>A little page made with love just for you</p>
+    <p>Before you scroll... I have a question for you</p>
   </header>
 
-  <section class="message">
-    <p>
-      Hola Mami! Felices 55 años espero que lo disfrutes! Te hice este website para hacerte feliz.
-    </p>
-    <p>
-      I wanted to make this little website to celebrate you and share some
-      special childhood memories. I hope your day is filled with happiness,
-      laughter, and love. You deserve the very best today and always.
-    </p>
-    <p>
-      Te Quiero!
-    </p>
+  <section style="margin-top:40px;">
+    <h2>Are you ready for your birthday surprise? 🎁</h2>
+    <button onclick="showContent()" style="
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background: #e88c8d;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    ">
+      Click here ❤️
+    </button>
   </section>
 
-  <section class="gallery">
-    <img src="photo1.jpeg" alt="Childhood photo 1">
-    <img src="photo2.jpeg" alt="Childhood photo 2">
-    <img src="photo3.jpeg" alt="Childhood photo 3">
-    <img src="photo4.jpeg" alt="Childhood photo 4">
-  </section>
+  <div id="content" style="display:none;">
 
-  <footer>
-    Made with love for the best mom in the world
-  </footer>
+    <section class="message">
+      <p>
+        Hola Mami! Felices 55 años espero que lo disfrutes! Te hice este website para hacerte feliz.
+      </p>
+      <p>
+        I wanted to make this little website to celebrate you and share some special childhood memories. Espero que hayas disfrutado tu dia.
+      </p>
+      <p>
+        Te Quiero!
+      </p>
+    </section>
+
+    <section class="gallery">
+      <img src="photo1.jpeg">
+      <img src="photo2.jpeg">
+      <img src="photo3.jpeg">
+      <img src="photo4.jpeg">
+    </section>
+
+    <footer>
+      Made for the best mom in the world
+    </footer>
+
+  </div>
+
+  <script>
+    function showContent() {
+      document.getElementById("content").style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+  </script>
 
 </body>
-</html>
